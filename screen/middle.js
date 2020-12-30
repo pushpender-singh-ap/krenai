@@ -93,7 +93,7 @@ export default class Middle extends Component {
                 <View
                     key={index}
                     style={{
-                        height: 220, width: 210, backgroundColor: '#fff', margin: 6, justifyContent: 'center', borderRadius: 10,
+                        height: 220, width: 210, backgroundColor: '#fff', marginVertical: 10, justifyContent: 'center', borderRadius: 8, marginHorizontal: 10,
                         shadowColor: "#000",
                         shadowOffset: {
                             width: 0,
@@ -104,20 +104,20 @@ export default class Middle extends Component {
                         elevation: 5,
                     }} >
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('end')}>
-                        <Image source={{ uri: TrendsData.uri }} style={{ width: 170, height: 100, borderRadius: 10, alignSelf: 'center', }} />
+                        <Image source={{ uri: TrendsData.uri }} style={{ width: 180, height: 100, borderRadius: 8, alignSelf: 'center' }} />
                         <View style={{ flexDirection: "column" }}>
                             <View style={{ flexDirection: "row", marginTop: 10 }}>
-                                <Text style={{ fontSize: 19, marginLeft: 10, fontWeight: "bold" }}>{TrendsData.name}</Text>
+                                <Text style={{ fontSize: 14, marginLeft: 10, fontWeight: "bold" }}>{TrendsData.name}</Text>
                                 <View style={{ marginLeft: 5, flexDirection: "row", }}>
                                     <View style={{ height: 5, width: 5, borderRadius: 60, backgroundColor: 'red', alignSelf: "center", marginHorizontal: 2 }} />
-                                    <Text style={{ fontSize: 12, color: 'red', textAlign: 'center' }}>New</Text>
+                                    <Text style={{ fontSize: 10, color: 'red', textAlign: 'center' }}>New</Text>
                                 </View>
                             </View>
-                            <Text style={{ fontSize: 13, marginLeft: 10, marginRight: 10 }}>{TrendsData.des}</Text>
+                            <Text style={{ fontSize: 10, marginLeft: 10, marginRight: 10 }}>{TrendsData.des}</Text>
                         </View>
                         <View style={{ flexDirection: "row", justifyContent: 'space-between', marginLeft: 10, marginRight: 10 }}>
-                            <Text style={{ fontSize: 18, fontWeight: "bold" }}>{TrendsData.amount}</Text>
-                            <AntDesign name="pluscircle" size={24} color="black" />
+                            <Text style={{ fontSize: 12, fontWeight: "bold" }}>{TrendsData.amount}</Text>
+                            <AntDesign name="pluscircle" size={16} color="black" />
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -129,7 +129,7 @@ export default class Middle extends Component {
                 <View
                     key={index}
                     style={{
-                        height: 60, width: 290, backgroundColor: '#fff', marginHorizontal: 15, justifyContent: 'center', borderRadius: 10,
+                        height: 60, width: 290, backgroundColor: '#fff', marginHorizontal: 10, justifyContent: 'center', borderRadius: 8, marginVertical: 10,
                         shadowColor: "#000",
                         shadowOffset: {
                             width: 0,
@@ -140,12 +140,12 @@ export default class Middle extends Component {
                         elevation: 5,
                     }} >
                     <View style={{ flexDirection: "row" }}>
-                        <Image source={{ uri: ArrivalsData.uri }} style={{ width: 90, height: 50, borderRadius: 10, alignSelf: 'center', marginLeft: 5 }} />
-                        <View style={{ flexDirection: "column" }}>
-                            <Text style={{ fontSize: 9, marginLeft: 5, marginRight: 120 }}>{ArrivalsData.des}</Text>
-                            <View style={{ flexDirection: "row", justifyContent: 'space-between', marginLeft: 5, marginRight: 120 }}>
-                                <Text style={{ fontSize: 13, fontWeight: "bold" }}>{ArrivalsData.amount}</Text>
-                                <AntDesign name="pluscircle" size={20} color="black" />
+                        <Image source={{ uri: ArrivalsData.uri }} style={{ width: 90, height: 50, borderRadius: 8, alignSelf: 'center', marginLeft: 5 }} />
+                        <View style={{ flexDirection: "column", marginLeft: 5, width: "100%" }}>
+                            <Text style={{ fontSize: 8, width: "60%" }}>{ArrivalsData.des}</Text>
+                            <View style={{ flexDirection: "row", justifyContent: 'space-between', marginRight: 120 }}>
+                                <Text style={{ fontSize: 10, fontWeight: "bold" }}>{ArrivalsData.amount}</Text>
+                                <AntDesign name="pluscircle" size={16} color="black" />
                             </View>
                         </View>
                     </View>
@@ -167,65 +167,67 @@ export default class Middle extends Component {
         return (
             <View style={styles.container}>
                 <StatusBar style="auto" />
-                <View style={{ flexDirection: "row", justifyContent: "space-between", marginVertical: "6%", marginHorizontal: "3%" }}>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold' }}>
-                        Furniture
-                    </Text>
-                    <View style={{ flexDirection: "row" }}>
-                        <MaterialCommunityIcons name="shopping" size={24} color="black" />
-                    </View>
-                </View>
-                <View style={{ flexDirection: "row", alignSelf: 'center', bottom: "4%" }}>
-                    <View style={[styles.textInputStyle, { flexDirection: 'row', alignSelf: 'center' }]}>
-                        <Ionicons name="ios-search" size={30} color="gray" style={{ marginHorizontal: 15, top: 5 }} />
-                        <TextInput
-                            underlineColorAndroid="transparent"
-                            placeholder="Search unique furniture..."
-                        />
-                    </View>
-                    <View style={{
-                        height: 40, width: 40, backgroundColor: '#fff', justifyContent: 'center', borderRadius: 10, alignItems: "center", alignSelf: "center", alignContent: "center", marginHorizontal: 15,
-                        shadowColor: "#000",
-                        shadowOffset: {
-                            width: 0,
-                            height: 2,
-                        },
-                        shadowOpacity: 0.25,
-                        shadowRadius: 3.84,
-                        elevation: 5,
-                    }} >
-                        <Ionicons name="ios-switch" size={25} color="black" />
-                    </View>
-                </View>
-                <View style={{ flexDirection: "row", justifyContent: "space-between", paddingLeft: 20, paddingRight: 20, bottom: "3%" }}>
-                    <View style={{ flexDirection: "row", marginTop: 10 }}>
-                        <Text style={{ fontSize: 25, fontWeight: 'bold' }}>Morden</Text>
-                        <View style={{ marginLeft: 5, flexDirection: "row", }}>
-                            <View style={{ height: 5, width: 5, borderRadius: 60, backgroundColor: 'gray', alignSelf: "center", marginHorizontal: 2 }} />
-                            <Text style={{ fontSize: 12, color: 'gray', textAlign: 'center' }}>Good Quaily Items</Text>
+                <ScrollView>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", marginVertical: "6%", marginHorizontal: "3%" }}>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Furniture</Text>
+                        <View style={{ flexDirection: "row" }}>
+                            <MaterialCommunityIcons name="shopping" size={24} color="black" />
                         </View>
                     </View>
-                </View>
-                <ScrollView horizontal={true} style={{ bottom: "3%" }} showsHorizontalScrollIndicator={false}>
-                    {Trendslist}
-                </ScrollView>
-                <View style={{ flexDirection: "row", justifyContent: "space-between", paddingLeft: 20, paddingRight: 20, bottom: "4%" }}>
-                    <View style={{ flexDirection: "row" }}>
-                        <Text style={{ fontSize: 25, fontWeight: 'bold' }}>New Arrivals</Text>
-                        <View style={{ marginLeft: 5, flexDirection: "row", }}>
-                            <View style={{ height: 5, width: 5, borderRadius: 60, backgroundColor: 'gray', alignSelf: "center", marginHorizontal: 2 }} />
-                            <Text style={{ fontSize: 12, color: 'gray', textAlign: 'center' }}>Good Quaily Items</Text>
+                    <View style={{ flexDirection: "row", alignSelf: 'center', bottom: "4%" }}>
+                        <View style={[styles.textInputStyle, { flexDirection: 'row', alignSelf: 'center' }]}>
+                            <Ionicons name="ios-search" size={30} color="gray" style={{ marginHorizontal: 15, top: 5 }} />
+                            <TextInput
+                                underlineColorAndroid="transparent"
+                                placeholder="Search unique furniture..."
+                            />
+                        </View>
+                        <View style={{
+                            height: 40, width: 40, backgroundColor: '#fff', justifyContent: 'center', borderRadius: 10, alignItems: "center", alignSelf: "center", alignContent: "center", marginHorizontal: 15,
+                            shadowColor: "#000",
+                            shadowOffset: {
+                                width: 0,
+                                height: 2,
+                            },
+                            shadowOpacity: 0.25,
+                            shadowRadius: 3.84,
+                            elevation: 5,
+                        }} >
+                            <Ionicons name="ios-switch" size={25} color="black" />
                         </View>
                     </View>
-                </View>
-                <ScrollView horizontal={true} style={{ bottom: "3%" }} showsHorizontalScrollIndicator={false}>
-                    {Arrivalslist}
-                </ScrollView>
-                <View style={{ flexDirection: "row", justifyContent: "space-between", paddingLeft: 20, paddingRight: 20, paddingTop: 18 }}>
-                    <Text style={{ fontSize: 25, fontWeight: 'bold', bottom: "8%" }}>Best Sellers</Text>
-                </View>
-                <ScrollView horizontal={true} style={{ bottom: "4%", left: "1%" }} showsHorizontalScrollIndicator={false}>
-                    {Sellerslist}
+                    <View style={{ height: 10 }} />
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 10, bottom: "3%" }}>
+                        <View style={{ flexDirection: "row", marginTop: 10 }}>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Morden</Text>
+                            <View style={{ marginLeft: 10, flexDirection: "row", }}>
+                                <View style={{ height: 5, width: 5, borderRadius: 60, backgroundColor: 'gray', alignSelf: "center", marginHorizontal: 2 }} />
+                                <Text style={{ fontSize: 10, color: 'gray', textAlign: 'center' }}>Good Quaily Items</Text>
+                            </View>
+                        </View>
+                    </View>
+                    <ScrollView horizontal={true} style={{ bottom: "3%" }} showsHorizontalScrollIndicator={false}>
+                        {Trendslist}
+                    </ScrollView>
+                    <View style={{ height: 10 }} />
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", marginHorizontal: 10, bottom: "4%" }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>New Arrivals</Text>
+                            <View style={{ marginLeft: 10, flexDirection: "row", }}>
+                                <View style={{ height: 5, width: 5, borderRadius: 60, backgroundColor: 'gray', alignSelf: "center", marginHorizontal: 2 }} />
+                                <Text style={{ fontSize: 10, color: 'gray', textAlign: 'center' }}>Good Quaily Items</Text>
+                            </View>
+                        </View>
+                    </View>
+                    <ScrollView horizontal={true} style={{ bottom: "3%" }} showsHorizontalScrollIndicator={false}>
+                        {Arrivalslist}
+                    </ScrollView>
+                    <View style={{ flexDirection: "row", justifyContent: "space-between", paddingLeft: 20, paddingRight: 20, paddingTop: 18 }}>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', bottom: "8%" }}>Best Sellers</Text>
+                    </View>
+                    <ScrollView horizontal={true} style={{ bottom: "4%", left: "1%" }} showsHorizontalScrollIndicator={false}>
+                        {Sellerslist}
+                    </ScrollView>
                 </ScrollView>
             </View>
         );
@@ -234,7 +236,7 @@ export default class Middle extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#F2F2F2'
     },
     mediaImageContainer: {
         width: 180,

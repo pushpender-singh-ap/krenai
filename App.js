@@ -4,6 +4,9 @@ import { createStackNavigator } from 'react-navigation-stack';
 import home from './screen/home'
 import end from './screen/end'
 import middle from './screen/middle'
+import WebViews from './screen/WebViews'
+import WebViewss from './screen/WebViewss'
+
 const SwitchNavigator = createStackNavigator({
 	home: {
 		screen: home
@@ -14,7 +17,12 @@ const SwitchNavigator = createStackNavigator({
 	end: {
 		screen: end
 	},
-
+	WebViews: {
+		screen: WebViews
+	},
+	WebViewss: {
+		screen: WebViewss
+	},
 },
 {
 	initialRouteName: 'home'
